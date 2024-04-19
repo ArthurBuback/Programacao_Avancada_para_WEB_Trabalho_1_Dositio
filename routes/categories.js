@@ -75,4 +75,17 @@ export default async function categories(app, options) {
         
         return reply.code(204).send();;
     });
+
+
+    /*
+    app.get('/categories/:id/products', async (request, reply) => {
+        let id = request.params.id;
+        let category = await categories.findOne({_id: new app.mongo.ObjectId(id)});
+
+        
+        return id.products;
+    });
+    
+    */
+
 }
