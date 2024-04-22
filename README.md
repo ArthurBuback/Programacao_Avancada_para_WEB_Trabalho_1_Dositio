@@ -5,17 +5,23 @@ npm install
 
 npm run dev
 
+
 //criar o arquivo '.env' e preencher nele:
 STAGE='test'
+
 PORT='3000'
+
 HOST='127.0.0.1'
+
 JWT_SECRET='Abcd@1234'
+
 DB_URL='mongodb://localhost:27017/dositio'
 
 
 
 //coisas do thunder
 http://127.0.0.1:3000/products
+
 http://127.0.0.1:3000/categories
 
 Para pegar o "x-access-token", mude para "http://127.0.0.1:3000/auth" e de "GET" para "POST",
