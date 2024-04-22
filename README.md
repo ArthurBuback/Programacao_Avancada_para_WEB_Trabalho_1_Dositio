@@ -7,6 +7,7 @@ npm run dev
 
 
 //criar o arquivo '.env' e preencher nele:
+
 STAGE='test'
 
 PORT='3000'
