@@ -4,6 +4,7 @@ export default async function categories(app, options) {
     const InvalidCategoryError = createError('InvalidCategoryError', 'Categoria Inválida.', 400);
 
     const categories = app.mongo.db.collection('categories');
+    const products = app.mongo.db.collection('products');
 
     app.get('/categories', 
         {
