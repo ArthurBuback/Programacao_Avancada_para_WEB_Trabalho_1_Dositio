@@ -5,6 +5,7 @@ export default async function registers(app, options) {
 
     const registers = app.mongo.db.collection('registers');
 
+    // Cria um novo registro
     app.post('/registers', {
         schema: {
             body: {
