@@ -71,7 +71,8 @@ export default async function products(app, options) {
         await products.updateOne({_id: new app.mongo.ObjectId(id)}, {
             $set: {
                 name: product.name,
-                qtd: product.qtd
+                qtd: product.qtd,
+                category: productz.category
             }
         });
         
