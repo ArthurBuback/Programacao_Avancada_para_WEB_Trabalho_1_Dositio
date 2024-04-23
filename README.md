@@ -2,7 +2,7 @@
 
 Primeiramente, após realizar a instalação dos arquivos deste repositório, utilize "**npm install**" para instalar os arquivos faltantes.
 
-## Também é necessário criar o arquivo "**.env**" e preencher nele:
+Também é necessário criar o arquivo "**.env**" e preencher nele as seguintes informações:
 ```
 STAGE='test'
 PORT='3000'
