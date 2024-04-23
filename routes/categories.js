@@ -4,7 +4,6 @@ export default async function categories(app, options) {
     const InvalidCategoryError = createError('InvalidCategoryError', 'Categoria Inválida.', 400);
 
     const categories = app.mongo.db.collection('categories');
-    const products = app.mongo.db.collection('products');
 
     app.get('/categories', 
         {
@@ -76,17 +75,5 @@ export default async function categories(app, options) {
         
         return reply.code(204).send();;
     });
-
-
-    /*
-    app.get('/categories/:id/products', async (request, reply) => {
-        let id = request.params.id;
-        let category = await categories.findOne({_id: new app.mongo.ObjectId(id)});
-
-        
-        return id.products;
-    });
-    
-    */
 
 }
