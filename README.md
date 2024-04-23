@@ -1,6 +1,6 @@
 # Trabalho_1_Web_Avancada
 
-Primeiramente, após realizar a instalação dos arquivos deste repositório, utilize **npm install** para instalar os arquivos faltantes.
+Primeiramente, após realizar a instalação dos arquivos deste repositório, utilize "**npm install**" para instalar os arquivos faltantes.
 
 //criar o arquivo '.env' e preencher nele:
 
