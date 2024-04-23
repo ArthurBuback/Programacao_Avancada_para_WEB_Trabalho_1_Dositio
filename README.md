@@ -1,8 +1,7 @@
-# Dositio
-## Aluno: Arthur Trevizani Buback
-## Disciplina: Programação Avançada para WEB
-## Turma: CC5Mb
-## Docente: Wagner de Andrade Perin
+# Aluno: Arthur Trevizani Buback
+# Disciplina: Programação Avançada para WEB
+# Turma: CC5Mb
+# Docente: Wagner de Andrade Perin
 
 Primeiramente, após realizar a instalação dos arquivos deste repositório, utilize "**npm install**" para instalar os arquivos faltantes.
 
