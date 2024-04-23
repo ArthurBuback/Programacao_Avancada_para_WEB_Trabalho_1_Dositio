@@ -4,7 +4,6 @@ export default async function products(app, options) {
     const InvalidProductError = createError('InvalidProductError', 'Produto Inválido.', 400);
 
     const products = app.mongo.db.collection('products');
-    const categories = app.mongo.db.collection('categories');
 
     app.get('/products', 
         {
