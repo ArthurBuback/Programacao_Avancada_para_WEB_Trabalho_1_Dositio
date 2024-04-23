@@ -10,21 +10,26 @@ HOST='127.0.0.1'
 JWT_SECRET='Abcd@1234'
 DB_URL='mongodb://localhost:27017/dositio'
 ```
-npm run dev
 
-//coisas do thunder
-http://127.0.0.1:3000/products
+Por fim, utilizamos "**npm run dev**" para inicializarmos o servidor.
 
-http://127.0.0.1:3000/categories
-
-Para pegar o "x-access-token", mude para "http://127.0.0.1:3000/auth" e de "GET" para "POST",
-depois, selecione "Body" e preencha com
+Para utilizar vários comandos do servidor, necessitamos do "**x-access-token**", e para adquiri-lo, precisarmos alterar a "**URL**" para "http://127.0.0.1:3000/auth" e o "GET" para "POST"; depois, selecionar "Body" e preencher com
+```
 {
   "username":"arthur",
   "password":"Abcd@1234"
 }
+```
+Quando isto for feito, selecionamos "Headers" e preenchemos "header" com "x-access-token" e "value" com o conjunto de letras que adiquirimos.
 
+Agora, podemos realizar alguns comandos que não poderiamos anteriormente.
 
-Postar o "x-acces-token" no Header que aí tem permissão para modificar
-para o "DELETE", só colocar o id na frente.
-para o POST, tem que modificar o body (não precisa por o ID na hora de preencher)
+##Algumas informações extras de como utilizar o Thunder Client:
+
+"**http://127.0.0.1:3000/products**" para utilizar comandos em "Produtos"
+
+"**http://127.0.0.1:3000/categories**" para utilizar comandos em "Categorias"
+
+Para utilizar o comando "**DELETE**", precisamos por o id na frente.
+
+Para utilizar o comando "**POST**", devemos modificar o body também.
