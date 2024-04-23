@@ -5,6 +5,7 @@ export default async function products(app, options) {
 
     const products = app.mongo.db.collection('products');
 
+    // Retorna todos os produtos existentes
     app.get('/products', 
         {
             config: {
@@ -16,6 +17,7 @@ export default async function products(app, options) {
         }
     );
 
+    // Cria um novo produto
     app.post('/products', {
         schema: {
             body: {
@@ -40,6 +42,7 @@ export default async function products(app, options) {
         return reply.code(201).send();
     });
 
+    // Retorna o produto baseado no "id" dele
     app.get('/products/:id', async (request, reply) => {
         let id =  request.params.id;
         let product = await products.findOne({_id: new app.mongo.ObjectId(id)});
@@ -47,6 +50,7 @@ export default async function products(app, options) {
         return product;
     });
     
+    // Exclui o produto selecionada pelo "id"
     app.delete('/products/:id', {
         config: {
             requireAuthentication: true
@@ -59,6 +63,7 @@ export default async function products(app, options) {
         return reply.code(204).send();;
     });
 
+    // Atualiza o produto selecionada através do "id" dele
     app.put('/products/:id', {
         config: {
             requireAuthentication: true
