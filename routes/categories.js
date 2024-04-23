@@ -17,7 +17,7 @@ export default async function categories(app, options) {
         }
     );
 
-    // Cria nova categoria
+    // Cria uma nova categoria
     app.post('/categories', {
         schema: {
             body: {
