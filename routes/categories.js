@@ -5,6 +5,7 @@ export default async function categories(app, options) {
 
     const categories = app.mongo.db.collection('categories');
 
+    // Retorna todas as categorias existentes
     app.get('/categories', 
         {
             config: {
@@ -16,6 +17,7 @@ export default async function categories(app, options) {
         }
     );
 
+    // Cria nova categoria
     app.post('/categories', {
         schema: {
             body: {
@@ -39,13 +41,15 @@ export default async function categories(app, options) {
         return reply.code(201).send();
     });
 
+    // Retorna a categoria baseado no "id" dela
     app.get('/categories/:id', async (request, reply) => {
         let id =  request.params.id;
         let category = await categories.findOne({_id: new app.mongo.ObjectId(id)});
         
         return category;
     });
-    
+
+    // Exclui a categoria selecionada pelo "id"
     app.delete('/categories/:id', {
         config: {
             requireAuthentication: true
@@ -58,6 +62,7 @@ export default async function categories(app, options) {
         return reply.code(204).send();;
     });
 
+    // Atualiza a categoria selecionada através do "id" dela
     app.put('/categories/:id', {
         config: {
             requireAuthentication: true
